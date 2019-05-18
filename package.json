@@ -1,0 +1,26 @@
+{
+  "name": "www",
+  "version": "1.0.0",
+  "description": "Node package for bigsheepdesign.com",
+  "main": "index.js",
+  "dependencies": {
+    "cocoen": "^2.0.5",
+    "animsition": "^4.0.2",
+    "fullpage.js": "^3.0.4",
+    "ekko-lightbox": "^5.3.0",
+    "in-view": "^0.6.1",
+    "jquery": "^3.3.1",
+    "jquery-backstretch": "^2.1.17",
+    "bootstrap": "^4.3.1",
+    "scrollreveal": "^3.4.0",
+    "tilt.js": "^1.2.1"
+  },
+  "devDependencies": {
+    "@fortawesome/fontawesome-free": "^5.7.2"
+  },
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "",
+  "license": "ISC"
+}

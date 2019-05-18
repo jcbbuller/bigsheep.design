@@ -1,0 +1,67 @@
+{{#section about}} <!-- Start About Vapid section -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>Big Sheep Collective</title>
+	<meta name="description" content="A design collective building awesome things for those following their conscience." />
+	<meta name="keywords"  content="design, creative, design, web design, digital, non-profits, social causes" />
+	<meta name="Resource-type" content="Document" />
+
+	<!-- OPEN GRAPIHCS -->
+
+			<meta property="og:title" content="{{header_title type=text required=false label="Header title"}}" />
+			<meta property="og:url" content="http://www.bigsheep.design" />
+			<meta property="og:image" content="/static_imgs/bigsheep_og.jpg" />
+			<meta property="og:image:type" content="image/jpeg" />
+			<meta property="og:description" content="{{header_description type=text required=false label="Header description"}}"/>
+
+			<meta name="twitter:card" content="summary" />
+			<meta name="twitter:site" content="http://www.bigsheep.design" />
+			<meta name="twitter:title" content="{{header_title type=text required=false label="Header title"}}" />
+			<meta name="twitter:description" content="{{header_description type=text required=false label="Header description"}}" />
+			<meta name="twitter:image" content="/static_imgs/bisheep_og.jpg" />
+
+	<!-- END OPEN GRAPHICS -->
+
+{{> stylesheets}}
+
+</head>
+
+<body>
+  <div class="wrapper dark-nav">
+    <div class="animsition">
+
+  {{> navigation}}
+
+  <section id="intro" class="color-highlight-section reveal" data-background-color="{{background_color label="Background color" required=false}}">
+
+        {{main_header type=html editor=false images=true required=false label="Main header"}}
+
+  </section>
+  <section id="about">
+    <div class="col-md-8 offset-md-2 col-lg-8 offset-lg-2 col-xl-5 offset-xl-3 offset-sm-0 header-copy">
+
+    {{body type=html editor=false images=true required=false label="Main content"}}
+
+    <div class="color-block blue"></div>
+    <p><span class="about-title">Who we've worked with:</span></p>
+    <div class="row logos">
+      {{#section clients multiple=true sortable=true required=false}}
+      <div class="col-md-4 col-6">
+        <img src="{{client_image type=image tag=false required=false label="Client logo"}}" style="width:85%; margin:0px auto; height:auto;"/>
+      </div>
+      {{/section}}
+
+    </div>
+  </div>
+
+</section><!-- END #about -->
+
+    {{> footer}}
+  </body>
+</html>
+
+{{/section}} <!-- End About Vapid section -->

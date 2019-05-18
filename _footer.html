@@ -1,0 +1,203 @@
+<footer style="overflow:auto;">
+	<div class="col-md-10 offset-md-1 offset-sm-0">
+		<section id="contact" class="color-highlight-section" data-background-color="transparent">
+			<a href="mailto:info@bigsheep.co?subject=Hello,%20from%20%2ayour%20name%20here%2a"><i class="mail fab fa-telegram-plane"></i></a>
+			<h3>Want make awesome things? <br><a href="mailto:info@bigsheep.co?subject=Hello,%20from%20%2ayour%20name%20here%2a">Let us a know</a> how we can help.</h3>
+		</section>
+	</div>
+
+			<!-- Grid row -->
+			<div id="footer-bottom" class="col-md-10 offset-md-1 offset-sm-0">
+
+		<div class="row">
+			<div class="col-md-4 col-sm-4 col-xs-6">
+				<div class="footer-logo">
+					<img class="svg logo-image" style="width:20px; height:auto;" src="/static_imgs/logo-01.svg" alt="Jacob Buller">
+				</div>
+				<p>Big Sheep is a collection of creatives committed to building brands for the most impactful ideas.</p>
+			</div>
+
+			<div class="col-md-8 col-sm-8 col-xs-6">
+				<div class="social-icons-wrapper">
+					<div class="social-icons">
+						<a href="https://www.facebook.com/bootsnipp"><i class="fab fa-facebook-f"></i></a>
+						<a href="https://www.facebook.com/bootsnipp"><i class="fab fa-instagram"></i></a>
+						<a href="https://www.facebook.com/bootsnipp"><i class="fab fa-twitter"></i></a>
+					</div>
+					<div class="copy-right">
+						<p>&copy2018</p>
+					</div>
+				</div>
+
+				</div>
+
+			</div>
+		</div>
+		<!-- Grid row -->
+
+</footer>
+
+</div>
+
+
+
+
+<!-- END MAIN CONTENT -->
+
+
+</div> <!-- end .animsition -->
+</div> <!-- end. wrapper -->
+<script type="text/javascript" src="/node_modules/jquery/dist/jquery.min.js"></script>
+<script type="text/javascript" src="/node_modules/fullpage.js/vendors/scrolloverflow.min.js"></script>
+<script type="text/javascript" src="/node_modules/fullpage.js/dist/fullpage.min.js"></script>
+<script type="text/javascript" src="/node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+<script type="text/javascript" src="/node_modules/scrollreveal/dist/scrollreveal.min.js"></script>
+<script type="text/javascript" src="/node_modules/jquery-unslider/dist/js/unslider-min.js"></script>
+<script type="text/javascript" src="//stephband.info/jquery.event.move/js/jquery.event.move.js"></script>
+<script type="text/javascript" src="//stephband.info/jquery.event.swipe/js/jquery.event.swipe.js"></script>
+<script type="text/javascript" src="/node_modules/jquery-backstretch/jquery.backstretch.min.js"></script>
+<script type="text/javascript" src="/node_modules/animsition/dist/js/animsition.min.js"></script>
+<script type="text/javascript" src="/node_modules/in-view/dist/in-view.min.js"></script>
+<script type="text/javascript" src="/node_modules/ekko-lightbox/dist/ekko-lightbox.min.js"></script>
+<script type="text/javascript" src="/node_modules/cocoen/dist/js/cocoen.min.js"></script>
+
+
+<!--<script type="text/javascript" src=""></script>-->
+<script type="text/javascript">
+
+// Animsition page fade in
+$(".animsition").animsition({
+	 inClass: 'fade-in',
+	 outClass: 'fade-out',
+	 inDuration: 500,
+	 outDuration: 300,
+	 linkElement: '.animsition-link',
+	 // e.g. linkElement: 'a:not([target="_blank"]):not([href^="#"])'
+	 loading: true,
+	 loadingParentElement: 'body', //animsition wrapper element
+	 loadingClass: 'animsition-loading',
+	 loadingInner: '', // e.g '<img src="loading.svg" />'
+	 timeout: false,
+	 timeoutCountdown: 5000,
+	 onLoadEvent: true,
+	 browser: [ 'animation-duration', '-webkit-animation-duration'],
+	 // "browser" option allows you to disable the "animsition" in case the css property in the array is not supported by your browser.
+	 // The default setting is to disable the "animsition" in a browser that does not support "animation-duration".
+	 overlay : false,
+	 overlayClass : 'animsition-overlay-slide',
+	 overlayParentElement : 'body',
+	 transition: function(url){ window.location.href = url; }
+ });
+
+
+$(document).ready(function() {
+
+	$(window).scroll( function() {
+			if( $(this).scrollTop() > 0 ) {
+					$("#logo-container").fadeOut("slow");
+			}
+			else {
+					$("#logo-container").fadeIn("slow");
+			}
+	});
+
+
+	//inView background colors for each section
+	inView.threshold(0.3);
+	var $target = $('.color-highlight-wrapper');
+		inView('.color-highlight-section').on('enter', function(el) {
+			var color = $(el).attr('data-background-color');
+			$target.css('background-color', color );
+	});
+
+	//scroll reveal
+	// Changing the defaults
+	window.sr = ScrollReveal({ reset: true });
+
+	// Customizing a reveal set
+	sr.reveal('.reveal', { duration: 1000, distance: '200px', scale: 1, reset: false });
+
+
+$('#toggle').click(function() {
+	 $(this).toggleClass('active');
+	 $('#overlay').toggleClass('open');
+	 $('.menu-logo-image').toggleClass('logo-white');
+	});
+
+$('#menu-items li').click(function() {
+	 $('#toggle').removeClass('active');
+	 $('#overlay').toggleClass('open');
+	 if ($('.menu-logo-image').hasClass('logo-white')) {
+	 // DELAYS MAKING PLANE TURN DARK TO MATCH MENU OVERLAY DELAY
+	 setTimeout(function() {
+	 $('.menu-logo-image').removeClass('logo-white');
+ }, 100);
+		}
+	});
+
+	/*! Fades out the whole page when clicking links */
+//	$('a.x-link').click(function(e) {
+//	e.preventDefault();
+//	newLocation = this.href;
+//	$('body').fadeOut('fast', newpage);
+//	});
+//	function newpage() {
+//	window.location = newLocation;
+//	}
+
+
+	/*
+	 * Replace all SVG images with inline SVG
+	 */
+	jQuery('img.svg').each(function(){
+			var $img = jQuery(this);
+			var imgID = $img.attr('id');
+			var imgClass = $img.attr('class');
+			var imgURL = $img.attr('src');
+
+			jQuery.get(imgURL, function(data) {
+					// Get the SVG tag, ignore the rest
+					var $svg = jQuery(data).find('svg');
+
+					// Add replaced image's ID to the new SVG
+					if(typeof imgID !== 'undefined') {
+							$svg = $svg.attr('id', imgID);
+					}
+					// Add replaced image's classes to the new SVG
+					if(typeof imgClass !== 'undefined') {
+							$svg = $svg.attr('class', imgClass+' replaced-svg');
+					}
+
+					// Remove any invalid XML tags as per http://validator.w3.org
+					$svg = $svg.removeAttr('xmlns:a');
+
+					// Check if the viewport is set, if the viewport is not set the SVG wont't scale.
+					if(!$svg.attr('viewBox') && $svg.attr('height') && $svg.attr('width')) {
+							$svg.attr('viewBox', '0 0 ' + $svg.attr('height') + ' ' + $svg.attr('width'))
+					}
+
+					// Replace image with new SVG
+					$img.replaceWith($svg);
+
+			}, 'xml');
+
+	});
+
+	$(window).scroll(function() {
+	var scroll = $(window).scrollTop();
+	var backstretch_height = $('.dark-to-light').height();
+	if (scroll >= backstretch_height+125) {
+			$("#toggle").addClass("dark");
+	} else {
+			$("#toggle").removeClass("dark");
+	}
+	});
+
+});
+
+// Cocoen plugin for before/after slider
+document.querySelectorAll('.cocoen').forEach(function(element){
+	new Cocoen(element);
+});
+
+</script>

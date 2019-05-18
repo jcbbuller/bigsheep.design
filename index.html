@@ -1,0 +1,132 @@
+{{#section home}} <!-- Start Home Vapid section -->
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+
+  <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width">
+	<title>Big Sheep Design</title>
+	<meta name="description" content="A design collective building awesome things for those following their own, inspiring paths." />
+	<meta name="keywords"  content="design, creative, design, web design, digital, non-profits, social causes" />
+	<meta name="Resource-type" content="Document" />
+
+	<!-- OPEN GRAPIHCS -->
+
+			<meta property="og:title" content="{{header_title type=text required=false label="Header title"}}" />
+			<meta property="og:url" content="http://www.bigsheep.design" />
+			<meta property="og:image" content="/static_imgs/bigsheep_og.jpg" />
+			<meta property="og:image:type" content="image/jpeg" />
+			<meta property="og:description" content="{{header_description type=text required=false label="Header description"}}"/>
+
+			<meta name="twitter:card" content="A design collective building awesome things for those following their own, inspiring paths" />
+			<meta name="twitter:site" content="http://www.bigsheep.design" />
+			<meta name="twitter:title" content="{{header_title type=text required=false label="Header title"}}" />
+			<meta name="twitter:description" content="{{header_description type=text required=false label="Header description"}}" />
+			<meta name="twitter:image" content="/static_imgs/bisheep_og.jpg" />
+
+	<!-- END OPEN GRAPHICS -->
+
+{{> stylesheets}}
+
+</head>
+
+<body>
+  <div class="wrapper dark-nav">
+    <div class="animsition">
+
+  {{> navigation}}
+
+		<div class="color-highlight-wrapper">
+
+			<section id="intro" class="color-highlight-section reveal" data-background-color="transparent">
+
+						<div class="col-sm-10 col-md-10 col-lg-8 col-xs-12">
+							<div class="vmiddle-wrapper">
+					 	 		<div class="vmiddle-content">
+                  {{main_header type=html editor=false images=true required=false label="Main header"}}
+										<!--An agency <br/>opposed to <br/>prevailing advertising norms.-->
+										<!--<cite>Andrew Grove</cite>-->
+									<a class="text-left animsition-link" style="margin-top:20px!important; display:block;" href="about.html">Why, you ask? <span class="fa fa-arrow-right"></span></a>
+									<div id="scrollarrow" class="demo col-md-12">
+										<div><span></span></div>
+									</div>
+					  		</div>
+					 		</div>
+				    </div>
+
+      	</section>
+
+        <!-- Multiple Vapid Field Test -->
+
+
+            {{#section projects multiple=true sortable=true required=false}}
+            <div style="display:none;">{{publish type=choice input=radio}}</div>
+            {{#if publish type=choice input=radio}}
+            <section id="featured-projects" class="color-highlight-section reveal" data-background-color="{{background_color label="Background color" required=false}}">
+
+                    <div class="col-md-6 col-sm-12">
+                      <img style="width:100%; height:auto;" src="{{project_image type=image tag=false required=false}}"/>
+                    </div>
+                    <div class="col-md-6 col-sm-12">
+                      <div class="vmiddle-wrapper">
+                        <div class="vmiddle-content">
+                        <h3>{{type label="Project type" required=false}}</h3>
+                        <h2>{{title type=text}}</h2>
+                        <p>{{short_desc label="Short description" required=false}}</p>
+                        <a class="text-left animsition-link" href="{{_permalink}}">Read More <span class="fa fa-arrow-right"></span></a>
+                       </div>
+                      </div>
+                    </div>
+
+            </section>
+            {{/if}}
+            {{/section}}
+
+
+        <!-- End Vapid Field Test -->
+
+
+
+				<!--<section id="featured-projects" class="color-highlight-section reveal" data-background-color="#ffece7">
+
+								<div class="col-md-6 col-sm-12">
+									<img style="width:100%; height:auto;" src="imgs/evergreencemetery.png"/>
+								</div>
+								<div class="col-md-6 col-sm-12">
+									<div class="vmiddle-wrapper">
+										<div class="vmiddle-content">
+										<h3>Logo & Site Design</h3>
+										<h2>Evergreen</br>Restoration Fund</h2>
+										<p>We built an online resource for volunteers and donors of the Evergreen Cemetery reclamation project; a program determined to save the historical African American cemetery.</p>
+										<a class="text-left animsition-link" href="evergreencemetery.html">Read More <span class="fa fa-arrow-right"></span></a>
+									 </div>
+									</div>
+								</div>
+
+				</section>
+
+				<section id="featured-projects" class="color-highlight-section reveal" data-background-color="#e8e9ff">
+
+						<div class="col-md-6 col-sm-12">
+							<img style="width:100%; height:auto;" src="imgs/legaloutreach.png"/>
+						</div>
+						<div class="col-md-6 col-sm-12">
+							<div class="vmiddle-wrapper">
+								<div class="vmiddle-content">
+								<h3>Logo Revamp & Site Reskin</h3>
+								<h2>Legal Outreach</h2>
+								<p>We build an online resource for volunteers and donors of the Evergreen Cemetery reclamation project, a historical African Amercian cemetery outside of Richmond, Virginia.</p>
+								<a class="text-left animsition-link" href="legaloutreach.html">Read More <span class="fa fa-arrow-right"></span></a>
+							 </div>
+							</div>
+						</div>
+
+				</section>-->
+
+
+        			{{> footer}}
+            </body>
+            </html>
+
+
+{{/section}} <!-- End Home Vapid section -->
